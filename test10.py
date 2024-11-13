@@ -1,5 +1,5 @@
 n = 5  # 總共的行數
-space = '_'
+8space = '_'
 for i in range(n):  # 對於每一行
     # 印出空格
     print(space * (n - i - 1), end='')  # 在每行前面印出空格
