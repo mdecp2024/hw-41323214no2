@@ -47,7 +47,7 @@
 <p>PART 2: Introduction to lists and if/else statements</p>
 <p>PART 3: Introduction to the for loop</p>
 <p>完成上述流程整理後, 請將 HW2 自評分數輸入 cp2024 自評表單中.</p>
-<h2>w7</h2>
+<h2>W12</h2><h2>w7</h2>
 <div class="label style-scope ytcp-video-info">影片連結</div>
 <div class="value style-scope ytcp-video-info"><span class="video-url-fadeable style-scope ytcp-video-info"><a class="style-scope ytcp-video-info" href="https://youtu.be/EzRHoTxjzLw" target="_blank">https://youtu.be/EzRHoTxjzLw</a></span></div>
 <div class="value style-scope ytcp-video-info"><span class="video-url-fadeable style-scope ytcp-video-info"><a href="https://youtu.be/EzRHoTxjzLw">https://youtu.be/EzRHoTxjzLw</a><br/></span></div>
@@ -97,6 +97,7 @@ generate_pyramid(5)
 <p>3. 完成上列題目後, 請利用 Youtube 影片<span>簡報</span>個人的解題過程與心得.</p>
 <p>題目一:<a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/ac1461525d3891feea2669ad67bae51f/raw/853b57d8d97566cc7a1561c57045533b74e7e965/0907.py">https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/ac1461525d3891feea2669ad67bae51f/raw/853b57d8d97566cc7a1561c57045533b74e7e965/0907.py</a></p>
 <p>題目二:<a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/ac1461525d3891feea2669ad67bae51f/raw/853b57d8d97566cc7a1561c57045533b74e7e965/41323214.py">https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/ac1461525d3891feea2669ad67bae51f/raw/853b57d8d97566cc7a1561c57045533b74e7e965/41323214.py</a></p>
+<p>1.</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">圓的直徑是 2*n，所以總的行數和列數都是 2*n
 for i in range(2 * n):
 for j in range(2 * n):
@@ -106,11 +107,65 @@ print('*', end='')
 else:
 print(space, end='')
 print() # 換行</pre>
-<p></p>
-<p>__________*_________<br/>______*********_____<br/>____*************___<br/>___***************__<br/>__*****************_<br/>__*****************_<br/>_*******************<br/>_*******************<br/>_*******************<br/>_*******************<br/>********************<br/>_*******************<br/>_*******************<br/>_*******************<br/>_*******************<br/>__*****************_<br/>__*****************_<br/>___***************__<br/>____*************___<br/>______*********___</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 建立 canvas 超文件物件
+canvas = html.CANVAS(width=400, height=400)
+brython_div = doc["brython_div1"]  # 這需要在 HTML 中定義 &lt;div id="brython_div1"&gt;&lt;/div&gt;
+brython_div &lt;= canvas
+
+# 每一格的 pixel 數
+gs = 40  # 每格 40x40 pixels
+ctx = canvas.getContext("2d")
+
+# 方格繪製函式
+def dRect(lux, luy, w, h, s=1, c="lightgrey"):
+    ctx.lineWidth = s
+    ctx.strokeStyle = c
+    ctx.beginPath()
+    ctx.rect(lux, luy, w, h)
+    ctx.stroke()
+
+# 繪製方格
+def grid(width, height, grid_pix):
+    # x 方向共 width 格
+    # y 方向共 height 格
+    for i in range(width):
+        for j in range(height):
+            dRect(i * grid_pix, j * grid_pix, grid_pix, grid_pix, 1, "lightgrey")
+
+# 填充顏色函式
+def fill(x, y, color):
+    ctx.fillStyle = color
+    ctx.fillRect(x * gs, y * gs, gs, gs)
+
+# 圓形繪製函式
+def draw_circle(center_x, center_y, radius, grid_size):
+    for i in range(10):  # x 軸範圍
+        for j in range(10):  # y 軸範圍
+            # 計算格子中心點
+            cell_center_x = (i + 0.5) * grid_size
+            cell_center_y = (j + 0.5) * grid_size
+            # 計算格子中心到圓心的距離
+            distance = ((cell_center_x - center_x) ** 2 + (cell_center_y - center_y) ** 2) ** 0.5
+            # 若距離小於等於半徑，填色
+            if distance &lt;= radius:
+                fill(i, j, "black")  # 將填充顏色改為黑色
+
+# 繪製格子
+grid(10, 10, gs)
+
+# 設定圓心和半徑（單位：像素）
+circle_center_x = 200  # 圓心 x 座標 (canvas 中心)
+circle_center_y = 200  # 圓心 y 座標 (canvas 中心)
+circle_radius = 150    # 圓的半徑
+
+# 繪製圓形
+draw_circle(circle_center_x, circle_center_y, circle_radius, gs)</pre>
+<p><br/><br/></p>
 <p>心得:我都是用chatgpt幫我用10*10的圓,他很好的幫我解決問題,不會的python都能使用相當的方便</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BuXLN1q0sag" width="560"></iframe></p>
-<h1>HW 4</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BuXLN1q0sag" width="560"></iframe></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
