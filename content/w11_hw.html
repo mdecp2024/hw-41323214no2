@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,10 +141,28 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW2 << <a href='HW2.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3<br /><h1>HW 2 Exam</h1>
-<p>2每六人為一組進行協同程式練習</p>
-<p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<br />HW2 << <a href='HW2.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
+    <div id="tipue_search_content">W11 << <a href='W11.html'>Previous</a> <a href='HW 4.html'>Next</a> >> HW 4<br /><h1>w11_hw</h1>
+<p>以下影片說明如何利用近端可攜系統維護個人作業網站:</p>
+<p></p>
+<p>1.  已知可以用 Python 程式<a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5e6eda7a004c15fa7262b9a80bfa4af6/raw/c2225ac22f32ee8485a630b42cf3f4d8567bb661/up_to_down_pyramid.py">由上往下列印三角形 *</a>, 或<a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5e6eda7a004c15fa7262b9a80bfa4af6/raw/56793c72d4495d564e3cc6214ed5fb68dbd2b21d/left_to_right_pyramid.py">由左往右列印三角形 *</a>, 請將此程式延伸到可以在 10x10 的字元區域中, 以 "*" 字元列印出圓型區域. 完成後請將程式碼存入個人 Gist 後, 直接在個人作業網站中的 Brython 頁面中</p>
+<p>第一題         <a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/ac1461525d3891feea2669ad67bae51f/raw/853b57d8d97566cc7a1561c57045533b74e7e965/41323214.py">字號圖型</a></p>
+<p>2. 已知可以在網頁中利用 Brython 繪製方格與塗色, 如下連結, 請設法修改此一程式, 直接將程式存入個人的 Gist, 並利用黑色方塊圍出一個圓形區域.</p>
+<p> 第二題       <a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/ac1461525d3891feea2669ad67bae51f/raw/853b57d8d97566cc7a1561c57045533b74e7e965/0907.py">網頁上的方格與塗色</a></p>
+<p>3. 完成上列題目後, 請利用 Youtube 影片<span>簡報</span>個人的解題過程與心得.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">圓的直徑是 2*n，所以總的行數和列數都是 2*n
+for i in range(2 * n):
+for j in range(2 * n):
+# 計算當前 (i, j) 是否在圓的範圍內
+if (i - n) ** 2 + (j - n) ** 2 &lt;= n ** 2:
+print('*', end='')
+else:
+print(space, end='')
+print() # 換行</pre>
+<p></p>
+<p>__________*_________<br/>______*********_____<br/>____*************___<br/>___***************__<br/>__*****************_<br/>__*****************_<br/>_*******************<br/>_*******************<br/>_*******************<br/>_*******************<br/>********************<br/>_*******************<br/>_*******************<br/>_*******************<br/>_*******************<br/>__*****************_<br/>__*****************_<br/>___***************__<br/>____*************___<br/>______*********___</p>
+<p>心得:我都是用chatgpt幫我用10*10的圓,他很好的幫我解決問題</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BuXLN1q0sag" width="560"></iframe></p>
+<br />W11 << <a href='W11.html'>Previous</a> <a href='HW 4.html'>Next</a> >> HW 4</div>
         
     <!-- footer -->
       <div class="container">
