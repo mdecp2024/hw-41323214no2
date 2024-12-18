@@ -423,6 +423,27 @@ def add_only_even(start, end):
 # 測試 add_only_even 函式
 result = add_only_even(1, 100)
 print("1 到 100 的偶數累加結果是:", result)</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/564500d21bb230abc33853f2c10ed0e1/raw/d7136743798cae7383fc2a227f9d805e086e6823/w15-4.py">add_avoid_8</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 add_only_even 函式
+def add_only_even(start, end):
+    sum = 0
+    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
+        if i % 2 == 0:  # 檢查是否為偶數
+            sum += i
+    return sum
+
+# 定義 add_avoid_8 函式
+def add_avoid_8(start, end):
+    sum = 0
+    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
+        if '8' not in str(i):  # 檢查數字中是否不包含"8"
+            sum += i
+    return sum
+
+# 測試 add_only_even 函式
+result = add_only_even(1, 100)
+print("1 到 100 的偶數累加結果是:", result)
+</pre>
 <p></p><h1>HW2</h1>
 <h2>HW 2 Exam</h2>
 <p>2每六人為一組進行協同程式練習</p>
