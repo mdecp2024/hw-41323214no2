@@ -400,6 +400,29 @@ for i in range(1, 101):  # 從 1 到 100
     sum += i
 print("累加結果是:", sum)
 </pre>
+<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/23b35252d6a402b72f971beaecf53106/raw/e1bec29f878b6f14c2542729763b01418bbc0825/w15-1.py">addite(1,100)更改</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 addite 函數
+def addite(start, end):
+    sum = 0
+    for i in range(start, end + 1):  # 使用 start 到 end (包括 end)
+        sum += i
+    return sum
+
+# 使用 addite 函數來計算從 1 到 100 的總和
+result = addite(1, 100)
+print("累加結果是:", result)</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/0aafd2d7b1431f8cc884a8c9db40f590/raw/711be3e7a21e090ae354ca82c9f23077ef02a7c1/w15-3.py">add-only-even</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 add_only_even 函式
+def add_only_even(start, end):
+    sum = 0
+    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
+        if i % 2 == 0:  # 檢查是否為偶數
+            sum += i
+    return sum
+
+# 測試 add_only_even 函式
+result = add_only_even(1, 100)
+print("1 到 100 的偶數累加結果是:", result)</pre>
 <p></p><h1>HW2</h1>
 <h2>HW 2 Exam</h2>
 <p>2每六人為一組進行協同程式練習</p>
