@@ -551,7 +551,145 @@ ctx.fill()</pre>
 <h2>HW 3 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 3 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h3>w16_exam2</h3><h1>HW 4</h1>
+<h3>w16_exam2</h3>
+<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/e63beca7ab7216af1caa000213127e32/raw/f6f1f8e3864f72022fde9cd2d01d01344176d95e/w16_exam2.py">迷宮</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width=600, height=600)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 取得 canvas 的繪圖上下文
+ctx = canvas.getContext("2d")
+
+# 設置線條樣式
+ctx.strokeStyle = "#000000";  # 改為黑色
+ctx.lineWidth = 8;
+
+# 定義原點偏移量
+origin_x = 32
+origin_y = 14
+
+# 標示原點座標
+ctx.font = "12px Arial"
+ctx.fillStyle = "black"
+ctx.fillText("(32, 14)", 35, 50)
+
+# 繪製迷宮圖案
+ctx.beginPath();
+
+# 外框左上
+ctx.moveTo(50 + origin_x, 50 + origin_y);
+ctx.lineTo(250 + origin_x, 50 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 外框右上
+ctx.beginPath();
+ctx.moveTo(350 + origin_x, 50 + origin_y);
+ctx.lineTo(550 + origin_x, 50 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 外框左
+ctx.beginPath();
+ctx.moveTo(50 + origin_x, 50 + origin_y);
+ctx.lineTo(50 + origin_x, 550 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 外框右
+ctx.beginPath();
+ctx.moveTo(550 + origin_x, 50 + origin_y);
+ctx.lineTo(550 + origin_x, 550 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 外框左下
+ctx.moveTo(50 + origin_x, 550 + origin_y);
+ctx.lineTo(250 + origin_x, 550 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 外框右下
+ctx.beginPath();
+ctx.moveTo(350 + origin_x, 550 + origin_y);
+ctx.lineTo(550 + origin_x, 550 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部橫1
+ctx.beginPath();
+ctx.moveTo(150 + origin_x, 150 + origin_y);
+ctx.lineTo(450 + origin_x, 150 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部橫2
+ctx.beginPath();
+ctx.moveTo(50 + origin_x, 250 + origin_y);
+ctx.lineTo(250 + origin_x, 250 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部橫3
+ctx.beginPath();
+ctx.moveTo(150 + origin_x, 350 + origin_y);
+ctx.lineTo(450 + origin_x, 350 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部橫4
+ctx.beginPath();
+ctx.moveTo(250 + origin_x, 450 + origin_y);
+ctx.lineTo(350 + origin_x, 450 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部直1
+ctx.beginPath();
+ctx.moveTo(250 + origin_x, 150 + origin_y);
+ctx.lineTo(250 + origin_x, 253.5 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部直2
+ctx.beginPath();
+ctx.moveTo(450 + origin_x, 150 - 3.5 + origin_y);
+ctx.lineTo(450 + origin_x, 250 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部直3
+ctx.beginPath();
+ctx.moveTo(350 + origin_x, 250 + origin_y);
+ctx.lineTo(350 + origin_x, 350 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部直4
+ctx.beginPath();
+ctx.moveTo(150 + origin_x, 350 + origin_y);
+ctx.lineTo(150 + origin_x, 350 + 100 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部直5
+ctx.beginPath();
+ctx.moveTo(450 + origin_x, 350 + origin_y);
+ctx.lineTo(450 + origin_x, 350 + 200 + origin_y);
+ctx.closePath();
+ctx.stroke();
+
+# 內部直6
+ctx.beginPath();
+ctx.moveTo(250 + origin_x, 450 + origin_y);
+ctx.lineTo(250 + origin_x, 450 + 100 + origin_y);
+ctx.closePath();
+ctx.stroke();</pre>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/tLBh2QF7xZ0" width="560"></iframe></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
