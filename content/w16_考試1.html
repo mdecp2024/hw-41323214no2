@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,62 +141,100 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w14_ex << <a href='w14_ex.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2<br /><h1>w15</h1>
-<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/79ad95587575a80a2eeee74c67bdc49b/raw/c4248077d79404b39a18eae737b42049a942bfaa/w15.py">1累加100</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 方法 1: 使用 for 迴圈
-sum = 0
-for i in range(1, 101):  # 從 1 到 100
-    sum += i
-print("累加結果是:", sum)
-</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/23b35252d6a402b72f971beaecf53106/raw/e1bec29f878b6f14c2542729763b01418bbc0825/w15-1.py">addite(1,100)更改</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 addite 函數
-def addite(start, end):
-    sum = 0
-    for i in range(start, end + 1):  # 使用 start 到 end (包括 end)
-        sum += i
-    return sum
-
-# 使用 addite 函數來計算從 1 到 100 的總和
-result = addite(1, 100)
-print("累加結果是:", result)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/0aafd2d7b1431f8cc884a8c9db40f590/raw/711be3e7a21e090ae354ca82c9f23077ef02a7c1/w15-3.py">add-only-even</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 add_only_even 函式
-def add_only_even(start, end):
-    sum = 0
-    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
-        if i % 2 == 0:  # 檢查是否為偶數
-            sum += i
-    return sum
-
-# 測試 add_only_even 函式
-result = add_only_even(1, 100)
-print("1 到 100 的偶數累加結果是:", result)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/564500d21bb230abc33853f2c10ed0e1/raw/d7136743798cae7383fc2a227f9d805e086e6823/w15-4.py">add_avoid_8</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 add_only_even 函式
-def add_only_even(start, end):
-    sum = 0
-    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
-        if i % 2 == 0:  # 檢查是否為偶數
-            sum += i
-    return sum
-
-# 定義 add_avoid_8 函式
-def add_avoid_8(start, end):
-    sum = 0
-    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
-        if '8' not in str(i):  # 檢查數字中是否不包含"8"
-            sum += i
-    return sum
-
-# 測試 add_only_even 函式
-result = add_only_even(1, 100)
-print("1 到 100 的偶數累加結果是:", result)
-</pre>
-<p></p>
-<p>心得:在學習1累加到到100的程式需了解每一行的用意，現在的我還不是很會所以我都用chatgpt幫我解釋每一行的作用跟他的意思。</p>
-<p></p>
-<p></p><br />w14_ex << <a href='w14_ex.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
+    <div id="tipue_search_content">HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3<br /><h1>w16_考試1</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">從瀏覽器匯入文檔，html</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+導入數學</span></span><span></span>
+ <span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 初始化 HTML，確保 canvas 元素存在</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+def setup_canvas():</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    如果不是 document.querySelector("#my_canvas")：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        畫布= html.CANVAS（id =“my_canvas”，寬度= 800，高度= 600）</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        文檔 &lt;= 畫布</span></span><span></span>
+ <span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+setup_canvas()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 設定畫布</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+畫布=文檔[“my_canvas”]</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx = canvas.getContext("2d")</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 設定原點 (32, 14)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+原點_x、原點_y = 32、14</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 繪製X軸</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.moveTo(origin_x, origin_y)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineTo(500, origin_y)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.筆畫樣式 = "黑色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineWidth = 2</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx. 中風()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 繪製Y軸</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.moveTo(origin_x, origin_y)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineTo(origin_x, 300)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx. 中風()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 標籤原點</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.font = "12px 宋體"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillStyle = "黑色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillText("(32, 14)", origin_x + 5, origin_y - 5)</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 繪製形狀</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 調整位置以解決對齊問題</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 六角形（橘色）</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+十六進位_x, 十六進位_y = 100, 100</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+對於範圍 (6) 內的 i：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    角度 = i * (2 * math.pi / 6)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    x = hex_x + 30 * math.cos(角度)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    y = hex_y + 30 * math.sin(角度)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    如果我==0：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        ctx.moveTo(x, y)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    別的：</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        ctx.lineTo(x, y)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.closePath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillStyle = "橘色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fill()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 鑽石（青色）</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.moveTo(160, 70)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineTo(180, 100)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineTo(160, 130)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineTo(140, 100)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.closePath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillStyle = "青色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fill()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 三角形（青色）</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.moveTo(165, 130)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineTo(205, 130)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.lineTo(185, 100)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.closePath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillStyle = "藍色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fill()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 圓圈（粉紅色）</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.arc(230, 100, 30, 0, 2 * math.pi)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillStyle = "粉紅色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fill()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 方形（黃色）</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx. 矩形(265, 75, 50, 50)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillStyle = "黃色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fill()</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+# 矩形（藍色）</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.beginPath()</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx. 矩形(320, 90, 60, 20)</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fillStyle = "藍色"</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+ctx.fill()</span></span></pre>
+<p><a href="https://mdecp2024.github.io/hw-41323214no2/content/Brython.html?src=https://gist.githubusercontent.com/41323214no2/dd05b049e5145ef536a460d269d898dd/raw/a35614b749ec869aec0de4dfa002ea73b1d24298/w16_exam1.py"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">計劃</span></span></a></p>
+<p><img alt="" height="350" src="./../images/螢幕擷取畫面 2025-01-04 212519.png" width="523"/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/yEHgMKwsx0o" width="560"></iframe></p><br />HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
         
     <!-- footer -->
       <div class="container">
